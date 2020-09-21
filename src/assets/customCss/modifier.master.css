@@ -1,0 +1,73 @@
+@import "mat.custom.css";
+*{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+*::-webkit-scrollbar-track{border-radius:2px;width: 2px;margin-top: 100px;margin-bottom:100px;background: transparent;}
+*::-webkit-scrollbar{width: 2px;height:2px;background-color: transparent;}
+*::-webkit-scrollbar-thumb{border-radius:2px;background-color: transparent}
+
+*:hover::-webkit-scrollbar-track{border-radius:2px;width: 2px;margin-top: 100px;margin-bottom:100px;background: #dee2e6;}
+*:hover::-webkit-scrollbar{width: 2px;height:2px;background-color: transparent;}
+*:hover::-webkit-scrollbar-thumb{border-radius:2px;background-color: #ACB5CC}
+
+/* ------------------custom css modifier---------------- */
+.min-w-0{min-width: 0!important;}
+.min-h-0{min-height: 0!important;}
+/*------title-------*/
+.sm-t{font-size: .75rem!important;}
+.md-t{font-size: 1.2rem!important;}
+.lg-t{font-size: 1.7rem!important;}
+/*----------line height------------*/
+.lh-0{line-height:normal}
+
+.icon{height: 100%;display: flex;justify-content: center;align-items: center;}
+.icon-img{height: 1.2rem}
+.icon-svg{height: auto;width: 1.3em;}
+
+/*--------------sile toggle-------------------*/
+.mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label, .mat-accent .mat-slider-track-fill {
+  background-color: #ff8316!important;
+}
+.mat-slider:not(.mat-slider-disabled).cdk-focused .mat-slider-thumb-label {
+  border-radius: 4px 4px 0!important;
+  height: 20px;
+  width: 50px;
+  transform: translateY(10px) rotate(0deg)!important;
+}
+.mat-slider-horizontal .mat-slider-thumb-label-text {transform: rotate(0deg)!important;}
+.mat-button-toggle-button{display: flex;justify-content: center}
+.mat-button-toggle-label-content{display: flex!important;align-items: center;justify-content: center;}
+.mat-button-toggle-label-content{height: 100%;width: 100%}
+
+/*----- mat card ------*/
+.mat-card{box-shadow:none!important;border:1px solid #EAEEF0!important;}
+
+/*----mat-drawer------*/
+.mat-list-base .mat-list-item .mat-list-text>*,
+.mat-list-base .mat-list-option .mat-list-text>* {
+  font-weight: 500!important;}
+
+/*.mat-tab-label {min-width: 0!important;padding: 0 14px!important;}*/
+.mat-tab-labels{justify-content: space-between;}
+.mat-tab-body{width: 22vw}
+
+.c-title{
+  font-weight: 600;
+  font-size: 1.42rem;
+  font-family: 'Comfortaa', cursive;
+}
+
+.mat-flat-button{
+  min-width: 0!important;
+}
+
+/*----custom color palate------*/
+/* green ffc107 */
+i.dropdown{display: none!important;}

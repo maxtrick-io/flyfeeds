@@ -1,0 +1,9 @@
+@import "src/assets/customCss/mod.palate";
+.login{
+  &__head{
+    font-size: $head_md;
+  }
+  &__terms{
+    font-size: $policy-terms;
+  }
+}
