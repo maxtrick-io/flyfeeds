@@ -1,7 +1,10 @@
 @import "src/assets/customCss/mod.palate";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
 .login{
   &__head{
     font-size: $head_md;
+    font-family: Comfortaa;
   }
   &__terms{
     font-size: $policy-terms;
