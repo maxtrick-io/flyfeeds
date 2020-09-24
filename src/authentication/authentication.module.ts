@@ -11,26 +11,27 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider';
-import {
-  MAT_RIPPLE_GLOBAL_OPTIONS,
-  MatNativeDateModule,
-  MatRippleModule,
-  RippleGlobalOptions
-} from '@angular/material/core';
+import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { RegisterComponent } from './register/register.component';
+import {BrowserModule} from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [LoginComponent, HelpComponent, AuthenticationComponent],
+  declarations: [LoginComponent, HelpComponent, AuthenticationComponent, RegisterComponent],
   imports: [
     CommonModule,
     routing,
-    // --------------------angular material's modules
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+
     A11yModule,
     MatButtonModule,
     MatButtonToggleModule,

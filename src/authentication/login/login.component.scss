@@ -1,10 +1,18 @@
 @import "src/assets/customCss/mod.palate";
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
 
-.login{
+.auth{
   &__head{
     font-size: $head_md;
     font-family: Comfortaa;
+  }
+  &__nav{
+    &__sign{
+      //background-image: url("src/assets/icons/webload/file-person-fill.svg");
+    }
+    &__reg{
+
+    }
   }
   &__terms{
     font-size: $policy-terms;
