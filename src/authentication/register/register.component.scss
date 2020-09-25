@@ -1,0 +1,8 @@
+.reg{
+  &__username{}
+  &__psswd{
+    border-radius: .25rem .25rem 0 0;
+    border-bottom: 0;
+  }
+  &__cpsswd{border-radius:0 0 .25rem .25rem;}
+}

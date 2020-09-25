@@ -7,14 +7,29 @@
     font-family: Comfortaa;
   }
   &__nav{
-    &__sign{
-      //background-image: url("src/assets/icons/webload/file-person-fill.svg");
-    }
-    &__reg{
-
+    height: 2rem;
+    justify-content: flex-end;
+  }
+  &__sign{
+    background-image: url("~src/assets/icons/webload/chevron-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1rem;
+  }
+  @media only screen and (max-width: 400px) {
+    &__nav{
+      justify-content: center;
     }
   }
+  &__reg{
+    background-image: url("~src/assets/icons/webload/chevron-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1rem;
+  }
+
   &__terms{
     font-size: $policy-terms;
+    text-align: center;
   }
 }

@@ -1,11 +1,11 @@
 <div class="d-flex flex-column h-100">
     <div class="auth h-100 w-100 d-flex flex-column justify-content-between">
       <span class="auth__head pb-2 pt-2 text-center justify-content-around">mailbox</span>
-      <div class="auth__nav d-flex justify-content-end btn-group d-flex justify-content-center" role="group" aria-label="Navigation">
-        <button mat-stroked-button type="button" class="auth__sign btn btn-dark"></button>
-        <button mat-stroked-button type="button" class="auth__reg btn btn-dark ">R</button>
+      <div class="auth__nav d-flex btn-group d-flex" role="group" aria-label="Navigation">
+        <button mat-stroked-button type="button" class="auth__sign btn"></button>
+        <button mat-stroked-button type="button" class="auth__reg btn"></button>
       </div>
-      <div class="d-flex flex-column justify-content-center align-items-center h-100 pt-lg-5">
+      <div class="d-flex flex-column justify-content-center align-items-center h-100 px-2">
         <div>
           <form [formGroup]="form" class="form-group W-100 d-flex flex-column justify-content-between align-items-center">
             <input formControlName="username" class="form-control mb-2" placeholder="username">
@@ -15,11 +15,11 @@
         </div>
       </div>
       <div class="btn-group d-flex justify-content-center" role="group" aria-label="SSO">
-        <button mat-stroked-button type="button" class="btn btn-dark">GitHub</button>
-        <button mat-stroked-button type="button" class="btn btn-dark">Outlook</button>
-        <button mat-stroked-button type="button" class="btn btn-dark">Gmail</button>
+        <button mat-stroked-button type="button" class="btn">GitHub</button>
+        <button mat-stroked-button type="button" class="btn">Outlook</button>
+        <button mat-stroked-button type="button" class="btn">Gmail</button>
       </div>
-      <span class="login__terms m-2 d-flex flex-column justify-content-between text-sm-center">
+      <span class="auth__terms m-2 d-flex flex-column justify-content-between">
         you're about to sign-in to our services, Curious about how we process your data?
       </span>
     </div>
