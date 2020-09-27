@@ -3,9 +3,10 @@
     <div class="content__home h-75"></div>
     <div class="content__auth h-25 d-flex justify-content-center align-items-center">
       <mat-button-toggle-group class="auth btn-group" role="group" aria-label="Basic example">
-        <mat-button-toggle mat-stroked-button type="button" class="auth__login" (click)="openDialog()">signup</mat-button-toggle>
         <mat-button-toggle mat-stroked-button disabled type="button" class="auth__logo"></mat-button-toggle>
-        <mat-button-toggle mat-stroked-button type="button" class="auth__register" (click)="openDialog()">register</mat-button-toggle>
+        <mat-button-toggle mat-stroked-button
+                           type="button" class="auth__login"
+                           (click)="openDialog()">signup</mat-button-toggle>
       </mat-button-toggle-group>
     </div>
   </div>

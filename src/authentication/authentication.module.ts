@@ -46,6 +46,6 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatSnackBarModule,
     MatTooltipModule,
   ],
-  entryComponents: [LoginComponent, SignupComponent]
+  entryComponents: [LoginComponent]
 })
 export class AuthenticationModule { }
