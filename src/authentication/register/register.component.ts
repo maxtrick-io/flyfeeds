@@ -18,3 +18,20 @@ export class RegisterComponent implements OnInit {
     });
   }
 }
+
+@Component({
+  selector: 'app-signup',
+  templateUrl: './login/signup.component.html',
+  styleUrls: ['./login/signup.component.scss']
+})
+export class SignupComponent implements OnInit {
+  form: FormGroup;
+  constructor(private formBuilder: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      username: ['', Validators.required ],
+      password: ['', Validators.required ]
+    });
+  }
+}

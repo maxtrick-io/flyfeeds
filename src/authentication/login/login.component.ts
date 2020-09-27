@@ -1,38 +1,51 @@
-import { Component, OnInit , EventEmitter} from '@angular/core';
+import {
+  Component,
+  OnInit,
+  EventEmitter,
+  ComponentFactoryResolver,
+  ViewChild,
+  ViewContainerRef,
+  ComponentRef,
+  AfterViewInit
+} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 import {MatSlideToggleChange} from '@angular/material/slide-toggle';
 import {FormBuilder, Validators} from '@angular/forms';
+import {RegisterComponent, SignupComponent} from '../register/register.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, AfterViewInit {
   form: any;
-
-  constructor(private formBuilder: FormBuilder) { }
-  isDisabled = true;
-  option = 'sign-in';
-  access = 'publicly';
+  @ViewChild('dynamic', {read: ViewContainerRef}) target: ViewContainerRef;
+  private componentRef: ComponentRef<any>;
+  constructor(
+    private formBuilder: FormBuilder,
+    private componentFactoryResolver: ComponentFactoryResolver) { }
 
   change: EventEmitter<MatSlideToggleChange>;
-  ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      username: ['', Validators.required ],
-      password: ['', Validators.required ]
-    });
+  ngOnInit(): void {}
+  ngAfterViewInit(): void {
+    this.login();
+  }
+  switchLogin(): void{
+    if (this.componentRef)
+    {this.destroyComponent(); }
+    const childComponent = this.componentFactoryResolver.resolveComponentFactory(RegisterComponent);
+    this.componentRef = this.target.createComponent(childComponent);
   }
 
-  changeSign(value: string): void {
-    this.option = value;
+  login(): void{
+    if (this.componentRef)
+    {this.destroyComponent(); }
+    const childComponent = this.componentFactoryResolver.resolveComponentFactory(SignupComponent);
+    this.componentRef = this.target.createComponent(childComponent);
   }
-  onChange(ob: MatSlideToggleChange): void {
-    if (ob.checked) {
-      this.access = 'private';
-    }
-    if (!ob.checked) {
-      this.access = 'publicly';
-    }
+
+  destroyComponent(): void{
+    this.componentRef.destroy();
   }
 }

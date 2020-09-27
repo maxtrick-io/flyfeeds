@@ -2,19 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
 
 .auth{
-  &__head{
-    font-size: $head_md;
-    font-family: Comfortaa;
-  }
   &__nav{
-    height: 2rem;
-    justify-content: flex-end;
+    justify-content: center;
   }
-  &__sign{
-    background-image: url("~src/assets/icons/webload/chevron-left.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1rem;
+  &__switch{
   }
   @media only screen and (max-width: 400px) {
     &__nav{
@@ -22,10 +13,6 @@
     }
   }
   &__reg{
-    background-image: url("~src/assets/icons/webload/chevron-right.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1rem;
   }
 
   &__terms{
