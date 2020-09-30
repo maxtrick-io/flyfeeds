@@ -1,9 +1,11 @@
 .auth{
-  &__logo{
+  &__login{
     background-image: url("~src/assets/icons/clones/mailbox.png");
     background-size: 2em;
     background-repeat: no-repeat;
     background-position: center;
-    width: 48px;
+    width: 4em;
+    height: 2rem;
+    box-shadow: 0 0 3px #bbbbbb;
   }
 }

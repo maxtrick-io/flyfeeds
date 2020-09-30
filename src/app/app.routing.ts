@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'flyfeeds' },
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
   { path: 'flyfeeds', component: ContentComponent },
   {
     path: 'login',

@@ -1,16 +1,18 @@
-<div class="d-flex flex-column h-100">
-    <div class="auth h-100 w-100 d-flex flex-column justify-content-between">
-      <div class="auth__nav d-flex btn-group d-flex" role="group" aria-label="Navigation">
-        <button mat-stroked-button (click)="login()" type="button" class="auth__sign btn btn-dark border-right-0">sign up</button>
-        <button mat-stroked-button (click)="switchLogin()" type="button" class="auth__reg btn btn-dark">register</button>
-      </div>
-      <div class="d-flex flex-column justify-content-center align-items-center h-100 px-2">
-        <template #dynamic></template>
-      </div>
-      <div class="btn-group d-flex justify-content-center" role="group" aria-label="SSO">
-        <button mat-stroked-button type="button" class="btn">GitHub</button>
-        <button mat-stroked-button type="button" class="btn">Outlook</button>
-        <button mat-stroked-button type="button" class="btn">Gmail</button>
-      </div>
+<div class="container h-100">
+    <div class="auth h-100 w-100 d-flex flex-column">
+        <div class="auth__card card w-auto p-2 h-75">
+          <button mat-stroked-button class="auth__register btn btn-dark mt-2 w-25">register</button>
+          <form [formGroup]="form" class="form-group mx-5 W-100 d-flex flex-column justify-content-between align-items-center">
+            <input formControlName="username" class="form-control mb-2" placeholder="e mail">
+            <input formControlName="password" class="form-control" type="password" placeholder="password">
+            <button mat-stroked-button class="btn btn-secondary mt-2 w-100">login</button>
+            <button class="auth__recover btn btn-link">forgot?</button>
+          </form>
+          <div class="auth__sso btn-group d-flex justify-content-center" role="group" aria-label="SSO">
+            <button mat-stroked-button type="button" class="auth__github btn"></button>
+            <button mat-stroked-button type="button" class="auth__outlook btn"></button>
+            <button mat-stroked-button type="button" class="auth__gmail btn"></button>
+          </div>
+        </div>
     </div>
 </div>

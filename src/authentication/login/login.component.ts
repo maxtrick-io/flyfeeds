@@ -11,7 +11,7 @@ import {
 import {DOCUMENT} from '@angular/common';
 import {MatSlideToggleChange} from '@angular/material/slide-toggle';
 import {FormBuilder, Validators} from '@angular/forms';
-import {RegisterComponent, SignupComponent} from '../register/register.component';
+import {RegisterComponent} from '../register/register.component';
 
 @Component({
   selector: 'app-login',
@@ -27,21 +27,18 @@ export class LoginComponent implements OnInit, AfterViewInit {
     private componentFactoryResolver: ComponentFactoryResolver) { }
 
   change: EventEmitter<MatSlideToggleChange>;
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      username: ['', Validators.required ],
+      password: ['', Validators.required ]
+    });
+  }
   ngAfterViewInit(): void {
-    this.login();
   }
   switchLogin(): void{
     if (this.componentRef)
     {this.destroyComponent(); }
     const childComponent = this.componentFactoryResolver.resolveComponentFactory(RegisterComponent);
-    this.componentRef = this.target.createComponent(childComponent);
-  }
-
-  login(): void{
-    if (this.componentRef)
-    {this.destroyComponent(); }
-    const childComponent = this.componentFactoryResolver.resolveComponentFactory(SignupComponent);
     this.componentRef = this.target.createComponent(childComponent);
   }
 

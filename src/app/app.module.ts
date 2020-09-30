@@ -9,22 +9,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentComponent
   ],
-  imports: [
-    BrowserModule,
-    routing,
-    MatDialogModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
+    imports: [
+        BrowserModule,
+        routing,
+        MatDialogModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatButtonToggleModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatCardModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -16,8 +16,8 @@ export class ContentComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(LoginComponent, {
-      width: '850px',
-      height: '525px'
+      width: '300px',
+      height: '450px'
     });
 
     dialogRef.afterClosed().subscribe(result => {

@@ -2,8 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
 
 .auth{
+  justify-content: center;
+  align-items: center;
+
+  &__card{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__register{
+    align-self: flex-end;
+    font-weight: 400;
+    background-color: #ffc107!important;
+  }
   &__nav{
     justify-content: center;
+  }
+  &__sign{
+    background-image: url("~src/assets/icons/webload/person-badge-fill.svg");
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   &__switch{
   }
@@ -12,11 +30,25 @@
       justify-content: center;
     }
   }
-  &__reg{
-  }
 
   &__terms{
     font-size: $policy-terms;
     text-align: center;
   }
+  &__recover{
+    font-size: smaller;
+    color:grey;
+    padding:1em;
+  }
+  &__sso{
+    height: 2rem;
+  }
+  &__sso > * {
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__github{background-image: url("../../assets/icons/artifacts/icons8_github.svg");}
+  &__outlook{background-image: url("~src/assets/icons/artifacts/icons8-microsoft.svg");border-width:1px 0;}
+  &__gmail{background-image: url("~src/assets/icons/artifacts/icons8-google.svg");}
 }

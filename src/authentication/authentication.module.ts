@@ -17,18 +17,17 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import { RegisterComponent, SignupComponent } from './register/register.component';
+import { RegisterComponent } from './register/register.component';
 import {BrowserModule} from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [LoginComponent, HelpComponent, AuthenticationComponent, RegisterComponent, SignupComponent],
+  declarations: [LoginComponent, HelpComponent, AuthenticationComponent, RegisterComponent],
   imports: [
     CommonModule,
     routing,
-    BrowserModule,
     FormsModule,
     ReactiveFormsModule,
 
