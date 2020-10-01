@@ -1,0 +1,98 @@
+p{margin: 0;}
+.canvas{  position: relative;width: 100%;  height:100vh;  padding-left: 15px;padding-right: 15px}
+mat-drawer{
+    width: 22vw;
+}
+.c-title{
+    font-size: x-large;
+    font-weight: 500;
+}
+.sub-menu > button, .control-panel > button{
+  height: 3.5rem!important;
+  border-radius: 0!important;
+  margin-bottom: 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sub-menu > button:not(:first-child), .control-panel > button{
+  filter: invert(29%) sepia(28%) saturate(137%) hue-rotate(241deg) brightness(101%) contrast(86%);
+  border:0;
+  background-size: 1.2rem;
+}
+
+.sub-menu > button:not(.amber):hover, .control-panel > button:hover {
+  filter: invert(35%) sepia(18%) saturate(3413%) hue-rotate(207deg) brightness(93%) contrast(87%);
+}
+
+.sub-menu > button:last-child{ height: 1.6em!important;}
+
+.logo{  background-size: 2rem;}
+
+.amber{background-image: url("../../assets/icons/clones/mailbox.png")}
+.explore{background-image: url("../../assets/icons/artifacts/columns-gap.svg")}
+.compose{background-image: url("../../assets/icons/artifacts/clipboard-plus.svg")}
+.mail{background-image: url("../../assets/icons/artifacts/inbox-fill.svg")}
+.collection{background-image: url("../../assets/icons/artifacts/collection-fill.svg")}
+.chat-box{background-image: url("../../assets/icons/artifacts/chat-square-dots-fill.svg")}
+.bookmark{background-image: url("../../assets/icons/artifacts/bookmark-fill.svg")}
+.m-opt{background-image: url("../../assets/icons/artifacts/dash.svg")}
+
+.gear{background-image: url("../../assets/icons/artifacts/gear-fill.svg")}
+.person-circle{background-image: url("../../assets/icons/artifacts/person-circle.svg");}
+.canvas-nav{
+    // width:3.8rem;
+    height: 100%;}
+.content-container{width: 100%;}
+
+.sidenav{min-width: 260px;max-width: 22vw;}
+
+.img-list{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.p-title{font-weight: 600;font-size: 1.42rem;}
+
+/*------side-container---------*/
+/*.side-container{padding: 0 16px 0 16px}*/
+.p-sub {
+  font-weight: 400;
+  font-size: .85rem;
+}
+.assigns{
+  overflow-y: auto;
+  /*padding: 0 16px 0 16px;*/
+}
+
+.nav-list{
+  min-width: 100px;
+  list-style: none;
+}
+
+
+/*.head{padding: 0 16px 0 16px}*/
+/*.cst-sty{border-radius: 8px}*/
+.filter{
+  background-image: url("../../assets/icons/artifacts/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 0;
+  background-color: #9898981f;
+  background-size: 1.36rem;
+}
+
+.search{width: 90%;caret-color: transparent;}
+
+
+button{
+    background-color: transparent!important;
+}
+.mat-tab-label{
+    min-width: 0px!important;
+}
+
+.sidenav {
+    min-width: 260px;
+    max-width: 22vw;
+}

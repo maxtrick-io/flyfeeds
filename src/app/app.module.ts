@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {routing} from './app.routing';
@@ -26,6 +27,8 @@ import {MatCardModule} from '@angular/material/card';
         FormsModule,
         ReactiveFormsModule,
         MatCardModule,
+
+        HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]

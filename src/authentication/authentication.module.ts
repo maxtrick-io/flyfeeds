@@ -18,7 +18,6 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { RegisterComponent } from './register/register.component';
-import {BrowserModule} from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 

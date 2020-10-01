@@ -9,6 +9,10 @@ export const routes: Routes = [
     path: 'login',
     loadChildren: () => import('../authentication/authentication.module').then(m => m.AuthenticationModule),
   },
+  {
+    path: 'home',
+    loadChildren: () => import('../flyfeeds/flyfeeds.module').then(m => m.FlyfeedsModule)
+  }
 ];
 
 export const routing: ModuleWithProviders<any> = RouterModule.forRoot(routes);

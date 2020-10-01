@@ -45,3 +45,11 @@ body{
     color: darkgrey!important;
   }
 }
+
+.mat-tab-label{
+  min-width: 0px!important;
+}
+.mat-tab-labels{
+  display: flex;
+  justify-content: space-between;
+}
