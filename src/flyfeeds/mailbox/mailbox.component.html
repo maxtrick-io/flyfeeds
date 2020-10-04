@@ -1,55 +1,47 @@
 <div class="h-100">
-    <div class="canvas d-flex flex-row p-0">
-      <div class="canvas-nav bg-white d-flex flex-column justify-content-between h-100 border-right">
-        <div class="sub-menu d-flex flex-column">
-          <button mat-stroked-button class="amber logo border-0 h-25"></button>
-          <button mat-stroked-button class="compose h-25"></button>
-          <button mat-stroked-button class="chat-box h-25"></button>
-          <button mat-stroked-button class="bookmark h-25"></button>
-          <button mat-stroked-button class="m-opt h-25" (click)="drawer.toggle()"></button>
-        </div>
-        <div class="control-panel h-auto d-flex flex-column">
-          <button mat-stroked-button class="gear h-25"></button>
-          <button mat-stroked-button class="person-circle h-25"></button>
-        </div>
-      </div>
-      <mat-drawer-container class="w-100" autosize>
-        <mat-drawer #drawer opened class="sidenav" position="start" mode="side">
-          <div class="side-container d-flex flex-column justify-content-start align-items-center h-100">
-            <div class="head d-flex  justify-content-between w-100 h-auto p-3">
-              <span class="c-title title d-flex text-capitalize">inbox</span>
-              <button mat-flat-button type="button" class="filter"></button>
+    <div class="nav d-flex flex-row p-0">
+        <div class="nav__sidenav bg-white d-flex flex-column justify-content-between border-right">
+            <div class="nav__s1 d-flex flex-column">
+                <button mat-stroked-button class="amber logo border-0 h-25"></button>
+                <button mat-stroked-button class="compose h-25"></button>
+                <button mat-stroked-button class="chat-box h-25"></button>
+                <button mat-stroked-button class="bookmark h-25"></button>
+                <button mat-stroked-button class="m-opt h-25" (click)="drawer.toggle()"></button>
             </div>
-            <!-- <sm-select
-              [options]="{direction: 'downward'}"
-              [(model)]="userModel.gender" placeholder="Select" class="fluid search">
-              <option value="m"><i class=""></i> all messages</option>
-              <option value="f"><i class=""></i> unread</option>
-              <option value="f"><i class=""></i> pinned</option>
-            </sm-select> -->
+            <div class="nav__s2 h-auto d-flex flex-column">
+                <button mat-stroked-button class="gear h-25"></button>
+                <button mat-stroked-button class="person-circle h-25"></button>
+            </div>
+        </div>
+        <mat-drawer-container autosize>
+        <mat-drawer #drawer opened class="nav__inbox" position="start" mode="side">
+            <div class="d-flex flex-column justify-content-start align-items-center h-100">
+            <div class="head d-flex  justify-content-between w-100 h-auto p-3">
+                <span class="c-title title d-flex text-capitalize">inbox</span>
+                <button mat-flat-button type="button" class="filter"></button>
+            </div>
             <div class="assigns d-flex justify-content-start mb-3 w-100 pt-3">
-              <mat-tab-group class="w-100">
+                <mat-tab-group class="w-100">
                 <mat-tab label="all">
-                  <mat-nav-list class="nav-list">
+                    <mat-nav-list class="nav-list">
                     <mat-list-item *ngFor="let card of posts" class="cst-sty">
-                      <!--                    <img matListAvatar src="{{message.avatarUrl + message.from}}" alt="...">-->
-                      <h6 matLine class="sender text-capitalize"> {{card.name}} </h6>
-                      <p matLine class="text-muted"> {{card.body}} </p>
-                      <p matLine class="text-muted"> {{card.email}} </p>
+                        <h6 matLine class="sender text-capitalize"> {{card.name}} </h6>
+                        <p matLine class="text-muted"> {{card.body}} </p>
+                        <p matLine class="text-muted"> {{card.email}} </p>
                     </mat-list-item>
-                  </mat-nav-list>
+                    </mat-nav-list>
                 </mat-tab>
                 <mat-tab label="focused"></mat-tab>
                 <mat-tab label="others"> </mat-tab>
-              </mat-tab-group>
+                </mat-tab-group>
             </div>
-          </div>
+            </div>
         </mat-drawer>
         <div class="d-flex align-content-center w-100 canvas-activity">
-          <div class="content-container overflow-auto h-100">
-            <!-- <app-chat-box class="h-100"></app-chat-box> -->
-          </div>
+            <div class="content-container overflow-auto h-100">
+            </div>
         </div>
-      </mat-drawer-container>
+        </mat-drawer-container>
     </div>
-  </div>
+</div>
+  

@@ -1,5 +1,34 @@
+.nav{
+    position: relative;width: 100%;  height:100vh;  padding-left: 15px;padding-right: 15px;
+    &__sidenav{
+        height: 100%;
+    }
+    &__s1 > button, &__s2 > button{
+        height: 3.5rem!important;
+        border-radius: 0!important;
+        margin-bottom: 2px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__s1 > button:not(:first-child), &__s2 > button{
+        filter: invert(29%) sepia(28%) saturate(137%) hue-rotate(241deg) brightness(101%) contrast(86%);
+        border:0;
+        background-size: 1.2rem;
+        border-left: 3px solid transparent;
+    } 
+    &__s1 > button:not(.amber):hover, &__s2 > button:hover {
+        filter: invert(35%) sepia(18%) saturate(3413%) hue-rotate(207deg) brightness(93%) contrast(87%);
+        border-left: 3px solid rgb(65, 60, 60);
+      }
+    &__s1 > button:last-child{ height: 1.6em!important;}
+
+    &__inbox{
+        min-width: 260px;max-width: 22vw;
+    }
+}
+
+
 p{margin: 0;}
-.canvas{  position: relative;width: 100%;  height:100vh;  padding-left: 15px;padding-right: 15px}
 mat-drawer{
     width: 22vw;
 }
@@ -7,30 +36,10 @@ mat-drawer{
     font-size: x-large;
     font-weight: 500;
 }
-.sub-menu > button, .control-panel > button{
-  height: 3.5rem!important;
-  border-radius: 0!important;
-  margin-bottom: 2px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.sub-menu > button:not(:first-child), .control-panel > button{
-  filter: invert(29%) sepia(28%) saturate(137%) hue-rotate(241deg) brightness(101%) contrast(86%);
-  border:0;
-  background-size: 1.2rem;
-  border-left: 3px solid transparent;
-}
-
-.sub-menu > button:not(.amber):hover, .control-panel > button:hover {
-  filter: invert(35%) sepia(18%) saturate(3413%) hue-rotate(207deg) brightness(93%) contrast(87%);
-  border-left: 3px solid rgb(65, 60, 60);
-}
-
-.sub-menu > button:last-child{ height: 1.6em!important;}
 
 .logo{  background-size: 2rem;}
 
-.amber{background-image: url("../../assets/icons/clones/mailbox.png")}
+.amber{background-image: url("../../assets/icons/clones/mailbox.png");outline: 3px solid white;}
 .explore{background-image: url("../../assets/icons/artifacts/columns-gap.svg")}
 .compose{background-image: url("../../assets/icons/artifacts/clipboard-plus.svg")}
 .mail{background-image: url("../../assets/icons/artifacts/inbox-fill.svg")}
@@ -46,7 +55,8 @@ mat-drawer{
     height: 100%;}
 .content-container{width: 100%;}
 
-.sidenav{min-width: 260px;max-width: 22vw;}
+.sidenav{}
+
 
 .img-list{
   width: 35px;
@@ -94,7 +104,3 @@ button{
     min-width: 0px!important;
 }
 
-.sidenav {
-    min-width: 260px;
-    max-width: 22vw;
-}
