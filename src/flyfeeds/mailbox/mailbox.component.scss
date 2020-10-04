@@ -16,7 +16,7 @@
         background-size: 1.2rem;
         border-left: 3px solid transparent;
     } 
-    &__s1 > button:not(.amber):hover, &__s2 > button:hover {
+    &__s1 > button:not(.nav__s1-logo):hover, &__s2 > button:hover {
         filter: invert(35%) sepia(18%) saturate(3413%) hue-rotate(207deg) brightness(93%) contrast(87%);
         border-left: 3px solid rgb(65, 60, 60);
       }
@@ -25,6 +25,18 @@
     &__inbox{
         min-width: 260px;max-width: 22vw;
     }
+
+    &__s1-logo{background-image: url("../../assets/icons/clones/mailbox.png");background-size: 2rem}
+    &__s1-explore{background-image: url("../../assets/icons/artifacts/columns-gap.svg")}
+    &__s1-compose{background-image: url("../../assets/icons/artifacts/clipboard-plus.svg")}
+    &__s1-mail{background-image: url("../../assets/icons/artifacts/inbox-fill.svg")}
+    &__s1-collection{background-image: url("../../assets/icons/artifacts/collection-fill.svg")}
+    &__s1-chat-box{background-image: url("../../assets/icons/artifacts/chat-square-dots-fill.svg")}
+    &__s1-bookmark{background-image: url("../../assets/icons/artifacts/bookmark-fill.svg")}
+    &__s1-m-opt{background-image: url("../../assets/icons/artifacts/dash.svg")}
+
+    &__s2-gear{background-image: url("../../assets/icons/artifacts/gear-fill.svg")}
+    &__s2-person-circle{background-image: url("../../assets/icons/artifacts/person-circle.svg");}
 }
 
 
@@ -37,9 +49,9 @@ mat-drawer{
     font-weight: 500;
 }
 
-.logo{  background-size: 2rem;}
+.logo{  ;}
 
-.amber{background-image: url("../../assets/icons/clones/mailbox.png");outline: 3px solid white;}
+.amber{background-image: url("../../assets/icons/clones/mailbox.png")}
 .explore{background-image: url("../../assets/icons/artifacts/columns-gap.svg")}
 .compose{background-image: url("../../assets/icons/artifacts/clipboard-plus.svg")}
 .mail{background-image: url("../../assets/icons/artifacts/inbox-fill.svg")}
@@ -54,9 +66,6 @@ mat-drawer{
     // width:3.8rem;
     height: 100%;}
 .content-container{width: 100%;}
-
-.sidenav{}
-
 
 .img-list{
   width: 35px;
