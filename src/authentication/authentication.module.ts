@@ -19,6 +19,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 
@@ -43,6 +44,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatSlideToggleModule,
     MatSnackBarModule,
     MatTooltipModule,
+    MatTabsModule
   ],
   entryComponents: [LoginComponent]
 })

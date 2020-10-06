@@ -8,11 +8,23 @@
   &__card{
     display: flex;
     justify-content: space-between;
+    min-width: 350px;
+  }
+  &__formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
   &__register{
     align-self: flex-end;
     font-weight: 400;
-    background-color: #ffc107!important;
   }
   &__nav{
     justify-content: center;
@@ -23,8 +35,7 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-  &__switch{
-  }
+
   @media only screen and (max-width: 400px) {
     &__nav{
       justify-content: center;
@@ -51,4 +62,13 @@
   &__github{background-image: url("../../assets/icons/artifacts/icons8_github.svg");}
   &__outlook{background-image: url("~src/assets/icons/artifacts/icons8-microsoft.svg");border-width:1px 0;}
   &__gmail{background-image: url("~src/assets/icons/artifacts/icons8-google.svg");}
+}
+
+
+.reg{
+  &__psswd{
+    border-radius: .25rem .25rem 0 0;
+    border-bottom: 0;
+  }
+  &__cpsswd{border-radius:0 0 .25rem .25rem;}
 }

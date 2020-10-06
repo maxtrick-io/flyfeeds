@@ -1,18 +1,41 @@
 <div class="container h-100">
-    <div class="auth h-100 w-100 d-flex flex-column">
-        <div class="auth__card card w-auto p-2 h-75">
-          <button mat-stroked-button class="auth__register btn btn-dark mt-2 w-25">register</button>
-          <form [formGroup]="form" class="form-group mx-5 W-100 d-flex flex-column justify-content-between align-items-center">
-            <input formControlName="username" class="form-control mb-2" placeholder="e mail">
-            <input formControlName="password" class="form-control" type="password" placeholder="password">
-            <button mat-stroked-button class="btn btn-secondary mt-2 w-100">login</button>
-            <button class="auth__recover btn btn-link">forgot?</button>
-          </form>
-          <div class="auth__sso btn-group d-flex justify-content-center" role="group" aria-label="SSO">
-            <button mat-stroked-button type="button" class="auth__github btn"></button>
-            <button mat-stroked-button type="button" class="auth__outlook btn"></button>
-            <button mat-stroked-button type="button" class="auth__gmail btn"></button>
+  <div class="auth h-100 w-100 d-flex flex-column">
+    <div class="auth__card card w-auto p-2 h-75">
+      <mat-tab-group mat-align-tabs="start" class="auth__tabgroup h-100">
+        <mat-tab label="Log In">
+          <div class="auth__formContainer">
+          <div></div>
+            <div *ngIf="username.touched && username.invalid" class="alert alert-danger m-1">this field is required.</div>
+            <form [formGroup]="form" class="auth__form form-group mx-5 W-100">
+              <input formControlName="username" class="form-control mb-2" placeholder="e mail">
+              <input formControlName="password" class="form-control" type="password" placeholder="password">
+              <button mat-stroked-button class="btn btn-secondary mt-2 w-100">login</button>
+              <button class="auth__recover btn btn-link">forgot?</button>
+            </form>
+            <div class="auth__sso btn-group d-flex justify-content-center" role="group" aria-label="SSO">
+              <button mat-stroked-button type="button" class="auth__github btn"></button>
+              <button mat-stroked-button type="button" class="auth__outlook btn"></button>
+              <button mat-stroked-button type="button" class="auth__gmail btn"></button>
+            </div>
           </div>
-        </div>
+        </mat-tab>
+        <mat-tab label="Sign Up">
+          <div class="auth__formContainer">
+            <div></div>
+            <form [formGroup]="register" class="reg mx-5 form-group W-100 d-flex flex-column justify-content-between align-items-center">
+              <input formControlName="username" class="reg__username form-control mb-2" placeholder="e mail">
+              <input formControlName="password" class="reg__psswd form-control" type="password" placeholder="password">
+              <input formControlName="confirm-password" class="reg__cpsswd form-control" type="password" placeholder="confirm password">
+              <button mat-stroked-button class="btn btn-secondary mt-4 w-100">sign up</button>
+            </form>
+            <div class="auth__sso btn-group d-flex justify-content-center" role="group" aria-label="SSO">
+              <button mat-stroked-button type="button" class="auth__github btn"></button>
+              <button mat-stroked-button type="button" class="auth__outlook btn"></button>
+              <button mat-stroked-button type="button" class="auth__gmail btn"></button>
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
     </div>
+  </div>
 </div>

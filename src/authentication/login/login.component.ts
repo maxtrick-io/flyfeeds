@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
   form: any;
   @ViewChild('dynamic', {read: ViewContainerRef}) target: ViewContainerRef;
   private componentRef: ComponentRef<any>;
+  register: any;
   constructor(
     private formBuilder: FormBuilder,
     private componentFactoryResolver: ComponentFactoryResolver) { }
@@ -29,12 +30,26 @@ export class LoginComponent implements OnInit, AfterViewInit {
   change: EventEmitter<MatSlideToggleChange>;
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      username: ['', Validators.required ],
+      username: ['', Validators.required ,Validators.minLength(5)],
       password: ['', Validators.required ]
+    });
+
+    this.register = this.formBuilder.group({
+      username: ['', [
+        Validators.required,
+        Validators.email
+      ]],
+      password: ['', [Validators.required]],
+      'confirm-password': ['', Validators.required]
     });
   }
   ngAfterViewInit(): void {
   }
+
+  get username(): any{
+      return this.form.get('username');
+    }
+
   switchLogin(): void{
     if (this.componentRef)
     {this.destroyComponent(); }
