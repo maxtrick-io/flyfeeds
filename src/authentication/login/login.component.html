@@ -7,14 +7,14 @@
           <div></div>
             <div *ngIf="username.touched && username.invalid" class="alert alert-danger m-1">this field is required.</div>
             <form [formGroup]="form" class="auth__form form-group mx-5 W-100">
-              <input formControlName="username" class="form-control mb-2" placeholder="e mail">
-              <input formControlName="password" class="form-control" type="password" placeholder="password">
+              <input formControlName="username" class="auth__email form-control" placeholder="e mail">
+              <input formControlName="password" class="auth__password form-control" type="password" placeholder="password">
               <button mat-stroked-button class="btn btn-secondary mt-2 w-100">login</button>
               <button class="auth__recover btn btn-link">forgot?</button>
             </form>
             <div class="auth__sso btn-group d-flex justify-content-center" role="group" aria-label="SSO">
               <button mat-stroked-button type="button" class="auth__github btn"></button>
-              <button mat-stroked-button type="button" class="auth__outlook btn"></button>
+              <button mat-stroked-button type="button" class="auth__outlook btn" (click)='signIn()'></button>
               <button mat-stroked-button type="button" class="auth__gmail btn"></button>
             </div>
           </div>
@@ -37,5 +37,13 @@
         </mat-tab>
       </mat-tab-group>
     </div>
-  </div>
+    <div *ngIf="authenticated; then welcomeUser else signInPrompt"></div>
+      <ng-template #welcomeUser>
+        <h4>Welcome {{ user.displayName }}!</h4>
+        <p>Use the navigation bar at the top of the page to get started.</p>
+      </ng-template>
+      <ng-template #signInPrompt>
+        <button mat-stroked-button type="button" class="auth__outlook btn" (click)='signOut()'></button>
+      </ng-template>
+    </div>
 </div>

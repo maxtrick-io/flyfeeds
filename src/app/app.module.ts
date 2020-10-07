@@ -11,7 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
-
+import { MsalModule } from '@azure/msal-angular';
+import { OAuthSettings } from '../authentication/auth.common/oauth';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,12 @@ import {MatCardModule} from '@angular/material/card';
         ReactiveFormsModule,
         MatCardModule,
 
-        HttpClientModule
+        HttpClientModule,
+        MsalModule.forRoot({
+          auth: {
+            clientId: OAuthSettings.appId
+          }
+        })
     ],
   providers: [],
   bootstrap: [AppComponent]

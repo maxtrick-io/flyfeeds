@@ -54,7 +54,8 @@
     align-items: center;
     width: 100%;
     height: auto;
-    padding:$p3 $p2 $p1 $p2;
+    padding:0 $p2;
+    margin: .75rem 0;
   }
   &__head{
     font-size: x-large;
@@ -64,10 +65,10 @@
     background-image: url("../../assets/icons/artifacts/plus.svg");
     background-repeat: no-repeat;
     background-position: center;
-    width: 0;
-    background-color: #9898981f;
+    background-color: #9898981f!important;
     background-size: 1.36rem;
-    height: 1rem;
+    height: 1.5rem;
+    min-width: 1.5rem!important;
   }
 }
 

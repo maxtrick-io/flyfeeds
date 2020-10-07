@@ -8,10 +8,11 @@ import {
   ComponentRef,
   AfterViewInit
 } from '@angular/core';
-import {DOCUMENT} from '@angular/common';
 import {MatSlideToggleChange} from '@angular/material/slide-toggle';
 import {FormBuilder, Validators} from '@angular/forms';
-import {RegisterComponent} from '../register/register.component';
+
+import { AuthService } from '../auth.services/auth.service'
+import { User } from '../auth.common/user'
 
 @Component({
   selector: 'app-login',
@@ -25,7 +26,8 @@ export class LoginComponent implements OnInit, AfterViewInit {
   register: any;
   constructor(
     private formBuilder: FormBuilder,
-    private componentFactoryResolver: ComponentFactoryResolver) { }
+    private componentFactoryResolver: ComponentFactoryResolver,
+    private authService: AuthService) { }
 
   change: EventEmitter<MatSlideToggleChange>;
   ngOnInit(): void {
@@ -53,11 +55,30 @@ export class LoginComponent implements OnInit, AfterViewInit {
   switchLogin(): void{
     if (this.componentRef)
     {this.destroyComponent(); }
-    const childComponent = this.componentFactoryResolver.resolveComponentFactory(RegisterComponent);
-    this.componentRef = this.target.createComponent(childComponent);
+    // const childComponent = this.componentFactoryResolver.resolveComponentFactory();
+    // this.componentRef = this.target.createComponent(childComponent);
   }
 
   destroyComponent(): void{
     this.componentRef.destroy();
+  }
+// -----------------login auth -----------
+   // Is a user logged in?
+   get authenticated(): boolean {
+    return this.authService.authenticated;
+  }
+  // The user
+  get user(): User {
+    return this.authService.user;
+  }
+
+  // <signInSnippet>
+  async signIn(): Promise<void> {
+    await this.authService.signIn();
+    console.log('202')
+  }
+  
+  signOut(): void {
+    this.authService.signOut();
   }
 }

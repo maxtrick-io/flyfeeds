@@ -17,17 +17,18 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 
-
+import { MsalModule } from '@azure/msal-angular';
+import { OAuthSettings } from './auth.common/oauth';
+import { AppRoutingModule } from './app-routing.module'
 
 @NgModule({
-  declarations: [LoginComponent, HelpComponent, AuthenticationComponent, RegisterComponent],
+  declarations: [LoginComponent, HelpComponent, AuthenticationComponent],
   imports: [
     CommonModule,
-    routing,
+    // routing,
     FormsModule,
     ReactiveFormsModule,
 
@@ -44,7 +45,13 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatSlideToggleModule,
     MatSnackBarModule,
     MatTooltipModule,
-    MatTabsModule
+    MatTabsModule,
+    MsalModule.forRoot({
+      auth: {
+        clientId: OAuthSettings.appId
+      }
+    }),
+    AppRoutingModule
   ],
   entryComponents: [LoginComponent]
 })
