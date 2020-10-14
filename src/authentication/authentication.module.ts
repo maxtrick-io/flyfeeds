@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
-import {routing} from './authentication.routing';
 import { HelpComponent } from './help/help.component';
 import { AuthenticationComponent } from './authentication.component';
 
@@ -22,13 +21,14 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 import { MsalModule } from '@azure/msal-angular';
 import { OAuthSettings } from './auth.common/oauth';
-import { AppRoutingModule } from './app-routing.module'
+import { AuthRoutingModule } from './auth-routing.module'
+
+import { AuthGuard } from './auth.guard/auth.guard'
 
 @NgModule({
   declarations: [LoginComponent, HelpComponent, AuthenticationComponent],
   imports: [
     CommonModule,
-    // routing,
     FormsModule,
     ReactiveFormsModule,
 
@@ -51,8 +51,9 @@ import { AppRoutingModule } from './app-routing.module'
         clientId: OAuthSettings.appId
       }
     }),
-    AppRoutingModule
+    AuthRoutingModule
   ],
+  providers: [AuthGuard],
   entryComponents: [LoginComponent]
 })
 export class AuthenticationModule { }

@@ -39,11 +39,11 @@
     </div>
     <div *ngIf="authenticated; then welcomeUser else signInPrompt"></div>
       <ng-template #welcomeUser>
-        <h4>Welcome {{ user.displayName }}!</h4>
-        <p>Use the navigation bar at the top of the page to get started.</p>
+        <h4>Welcome {{user.displayName}}!</h4>
+        <button mat-stroked-button type="button" class="btn" (click)='signOut()'>sign out</button>
       </ng-template>
       <ng-template #signInPrompt>
-        <button mat-stroked-button type="button" class="auth__outlook btn" (click)='signOut()'></button>
+        <!-- <button mat-stroked-button type="button" class="btn" (click)='signOut()'>sign out</button> -->
       </ng-template>
     </div>
 </div>

@@ -75,7 +75,6 @@ export class LoginComponent implements OnInit, AfterViewInit {
   // <signInSnippet>
   async signIn(): Promise<void> {
     await this.authService.signIn();
-    console.log('202')
   }
   
   signOut(): void {
