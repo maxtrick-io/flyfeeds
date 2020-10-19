@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {path:'', pathMatch: 'full', redirectTo: 'mailbox'},
-  { 
-    path: 'mailbox', component: MailboxComponent
+  {path: '', pathMatch: 'full', redirectTo: 'feeds'},
+  {
+    path: 'feeds', component: MailboxComponent
   },
   {
     path: 'dashboard', component: ControlPanelComponent

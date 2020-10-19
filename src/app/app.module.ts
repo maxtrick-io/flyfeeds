@@ -13,6 +13,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import { MsalModule } from '@azure/msal-angular';
 import { OAuthSettings } from '../authentication/auth.common/oauth';
+import {Canloadflyfeeds} from '../authentication/auth.guard/canloadflyfeeds.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,7 @@ import { OAuthSettings } from '../authentication/auth.common/oauth';
           }
         })
     ],
-  providers: [],
+  providers: [Canloadflyfeeds],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

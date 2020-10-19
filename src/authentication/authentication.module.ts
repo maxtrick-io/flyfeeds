@@ -21,9 +21,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 import { MsalModule } from '@azure/msal-angular';
 import { OAuthSettings } from './auth.common/oauth';
-import { AuthRoutingModule } from './auth-routing.module'
+import { AuthRoutingModule } from './auth-routing.module';
 
-import { AuthGuard } from './auth.guard/auth.guard'
+import { AuthGuard } from './auth.guard/auth.guard';
+import { Canloadflyfeeds } from './auth.guard/canloadflyfeeds.service';
 
 @NgModule({
   declarations: [LoginComponent, HelpComponent, AuthenticationComponent],
@@ -53,7 +54,7 @@ import { AuthGuard } from './auth.guard/auth.guard'
     }),
     AuthRoutingModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, Canloadflyfeeds],
   entryComponents: [LoginComponent]
 })
 export class AuthenticationModule { }

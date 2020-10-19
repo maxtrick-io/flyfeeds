@@ -12,9 +12,7 @@ const routes: Routes = [
   { path: 'help', component: HelpComponent },
   {
     path: 'dashboard',
-    component: ControlPanelComponent,
-    canActivate: AuthGuard
-
+    component: ControlPanelComponent
   }
 ];
 
