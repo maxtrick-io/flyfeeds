@@ -7,7 +7,7 @@ import { HelpComponent } from './help/help.component';
 import { ControlPanelComponent } from 'src/flyfeeds/control-panel/control-panel.component';
 
 const routes: Routes = [
-  {path:'', pathMatch: 'full', redirectTo: 'login'},
+  {path: '', pathMatch: 'full', redirectTo: 'login'},
   { path: 'login', component: LoginComponent},
   { path: 'help', component: HelpComponent },
   {

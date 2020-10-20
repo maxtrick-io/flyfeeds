@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Alert} from '../auth.common/alert'
+import {Alert} from '../auth.common/alert';
 
 @Injectable({
   providedIn: 'root'
@@ -9,11 +9,11 @@ export class AlertService {
   constructor() { }
   alerts: Alert[] = [];
 
-  add(message: string, debug: string) {
-    this.alerts.push({message: message, debug: debug});
+  add(message: string, debug: string): void {
+    this.alerts.push({message, debug});
   }
 
-  remove(alert: Alert) {
+  remove(alert: Alert): void {
     this.alerts.splice(this.alerts.indexOf(alert), 1);
   }
 }

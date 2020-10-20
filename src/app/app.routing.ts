@@ -2,19 +2,26 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { LoginComponent } from 'src/authentication/login/login.component';
-import { Canloadflyfeeds } from 'src/authentication/auth.guard/canloadflyfeeds.service';
+import { CanloadGuard } from 'src/authentication/auth.guard/canload.guard';
+import {AuthGuard} from '../authentication/auth.guard/auth.guard';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'auth' },
   {
     path: 'auth',
     loadChildren: () => import('../authentication/authentication.module').then(m => m.AuthenticationModule),
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'fly',
     loadChildren: () => import('../flyfeeds/flyfeeds.module').then(m => m.FlyfeedsModule),
-    canLoad: [Canloadflyfeeds]
+    canLoad: [CanloadGuard]
+  },
+  {
+    path: '**',
+    component: LoginComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

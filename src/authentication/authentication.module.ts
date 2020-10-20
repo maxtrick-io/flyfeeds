@@ -24,7 +24,7 @@ import { OAuthSettings } from './auth.common/oauth';
 import { AuthRoutingModule } from './auth-routing.module';
 
 import { AuthGuard } from './auth.guard/auth.guard';
-import { Canloadflyfeeds } from './auth.guard/canloadflyfeeds.service';
+import {CanloadGuard} from './auth.guard/canload.guard';
 
 @NgModule({
   declarations: [LoginComponent, HelpComponent, AuthenticationComponent],
@@ -54,7 +54,7 @@ import { Canloadflyfeeds } from './auth.guard/canloadflyfeeds.service';
     }),
     AuthRoutingModule
   ],
-  providers: [AuthGuard, Canloadflyfeeds],
+  providers: [AuthGuard, CanloadGuard],
   entryComponents: [LoginComponent]
 })
 export class AuthenticationModule { }

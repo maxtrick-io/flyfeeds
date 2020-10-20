@@ -6,6 +6,7 @@ import { MsalService } from '@azure/msal-angular';
 import { Client } from '@microsoft/microsoft-graph-client';
 
 import { AlertService } from './alert.service';
+import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,8 @@ export class AuthService {
   public user: User;
 
   constructor(private msalService: MsalService,
-              private alertsService: AlertService) {
+              private alertsService: AlertService,
+              private router: Router) {
       this.authenticated = this.msalService.getAccount() != null;
       this.getUser().then((user) => {this.user = user; });
      }
@@ -29,6 +31,7 @@ export class AuthService {
       if (result) {
         this.authenticated = true;
         this.user = await this.getUser();
+        await this.router.navigate(['fly']);
       }
     }
 

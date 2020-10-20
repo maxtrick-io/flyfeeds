@@ -39,7 +39,7 @@
     </div>
     <div *ngIf="authenticated; then welcomeUser else signInPrompt"></div>
       <ng-template #welcomeUser>
-        <h4>Welcome {{user.displayName}}!</h4>
+        <h4>Welcome {{user}}!</h4>
         <button mat-stroked-button type="button" class="btn" (click)='signOut()'>sign out</button>
       </ng-template>
       <ng-template #signInPrompt>

@@ -1,5 +1,6 @@
 import { PostmanService } from './../postman/postman.service';
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../authentication/auth.services/auth.service';
 
 @Component({
   selector: 'app-mailbox',
@@ -9,16 +10,20 @@ import { Component, OnInit } from '@angular/core';
 export class MailboxComponent implements OnInit {
 
   posts: Array<any>;
-  constructor(private postman: PostmanService) {this.posts = new Array<any>(); }
+  constructor(private postman: PostmanService,
+              private auth: AuthService) {this.posts = new Array<any>(); }
 
   ngOnInit(): void {
     this.postService();
   }
-  
-  postService() {
+
+  postService(): void {
     this.postman.getData().subscribe((posts) => {
       this.posts = posts;
     });
   }
 
+  signout(): void{
+    this.auth.signOut();
+  }
 }
