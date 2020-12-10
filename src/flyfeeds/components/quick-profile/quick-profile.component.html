@@ -1,0 +1,25 @@
+<div class="d-flex flex-column h-100">
+    <div class="col-md-12 px-0 h-100 d-flex justify-content-between">
+      <div class="h-100 w-100 d-flex flex-column justify-content-between">
+        <div class="avatar">
+          <img mat-card-avatar src="{{_imgUrl}}">
+        </div>
+        <!-- <span class="t-size mx-2 pb-2 pt-2 text-center justify-content-around">mailbox</span> -->
+        <div class="d-flex justify-content-center">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button mat-flat-button type="button" class="btn btn-secondary">GitHub</button>
+            <button mat-flat-button type="button" class="btn btn-secondary">Outlook</button>
+            <button mat-flat-button type="button" class="btn btn-secondary">Gmail</button>
+          </div>
+        </div>
+        <div class="btn-grp h-auto d-flex flex-column justify-content-between">
+          <!-- <div class="-li m-2 text-center">you're about to {{option}} <span class="">{{access}}</span> with GitHub</div> -->
+          <!-- <mat-slide-toggle (change)="onChange($event)" class="align-self-center mb-2" ></mat-slide-toggle> -->
+         <div class="d-flex justify-content-center">
+            <button mat-stroked-button class="" (click)="signout($event)">sign out</button>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

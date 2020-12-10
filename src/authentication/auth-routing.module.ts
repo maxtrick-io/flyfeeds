@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { HelpComponent } from './help/help.component';
-import { ControlPanelComponent } from 'src/flyfeeds/control-panel/control-panel.component';
+import { ControlPanelComponent } from 'src/flyfeeds/components/control-panel/control-panel.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'login'},

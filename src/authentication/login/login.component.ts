@@ -19,6 +19,8 @@ import { AuthService } from '../auth.services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit, AfterViewInit {
+  condition: boolean;
+  
   constructor(
     private formBuilder: FormBuilder,
     private componentFactoryResolver: ComponentFactoryResolver,
@@ -57,6 +59,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
       password: ['', [Validators.required]],
       'confirm-password': ['', Validators.required]
     });
+    this.condition = false;
   }
   ngAfterViewInit(): void { }
 

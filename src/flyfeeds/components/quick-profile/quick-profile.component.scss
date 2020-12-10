@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+/* span{padding-left: 10px;font-size: 15px;margin-top:-2px;text-transform: uppercase;} */
+h5,h6,p,span{text-align: center;color:#23272A;}
+span{margin:0px 10px;color: #23272A;}
+
+/* stylesheet basic */
+.img-container>img{display:block;width: 100%}
+
+.img-container{background:transparent;border-radius: 4px 0 0 4px;height: 100%;}
+.-li{text-align: left;color: #989898;font-size: .8rem;padding: 5px 5px 0 5px;}
+/*li{list-style: none}*/
+.octocat{height: 50px;display: flex;justify-content: space-between;}
+.-signup{width: 200px;height:50px;background-color:whitesmoke}
+
+.placeholder{display: flex;flex-direction: column;padding: 0 20px;}
+.-subtle{display: block;font-size: 12px;height: 22px;font-weight: 400;letter-spacing: 0.01em;}
+.-p-subtle{display: block;height: 28px;}
+
+
+
+/* angular material kit modification*/
+mat-card-subtitle{text-align: center;}
+
+.mat-card-title {display: block;margin-bottom: 4px;}
+.mat-card-subtitle{font-size: 12px;}
+.mat-card-subtitle:not(:first-child), .mat-card-title:not(:first-child) {margin-top: 0px;}
+.mat-card-image{height: 100px;}
+.mat-button-toggle{width: 70px;height: 50px;}
+
+
+.login-container{display: flex;height:100%;}
+.block{border: 1px solid gainsboro;padding-bottom: 5px;border-radius: 4px;}
+.sign-tab > .mat-button-toggle-button{height: 10px;}
+
+.t-size{font-size: 2.5rem;font-family: 'Comfortaa', cursive;}
+
+
+@media only screen and (max-width: 600px) {
+  .t-size{font-size: 1rem}
+  .-li{font-size:.7rem}
+  .btn-grp{padding: 10px;}
+}
+
+.btn-group{
+  font-family: 'Comfortaa', cursive;
+  font-size: smaller;
+}
+.btn-cover{
+  background-image: url("../../../assets/icons/artifacts/plus.svg");
+  background-size: 1.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.avatar{
+min-height: 50px;
+border-bottom: 1px solid #F1F1F1;
+}
+

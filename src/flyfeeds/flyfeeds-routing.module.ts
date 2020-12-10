@@ -1,5 +1,5 @@
-import { ControlPanelComponent } from './control-panel/control-panel.component';
-import { MailboxComponent } from './mailbox/mailbox.component';
+import { ControlPanelComponent } from './components/control-panel/control-panel.component';
+import { MailboxComponent } from './components/mailbox/mailbox.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

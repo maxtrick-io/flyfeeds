@@ -35,7 +35,8 @@ import {AuthGuard} from '../authentication/auth.guard/auth.guard';
         HttpClientModule,
         MsalModule.forRoot({
           auth: {
-            clientId: OAuthSettings.appId
+            clientId: OAuthSettings.appId,
+            // redirectUri: OAuthSettings.redirectUri,
           }
         })
     ],

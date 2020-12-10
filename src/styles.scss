@@ -55,5 +55,9 @@ body{
   .auth__tabgroup > .mat-tab-body-wrapper{
     height: 100%!important;
   }
+
+  .mat-dialog-container{
+    padding: 0!important;
+  }
 }
 

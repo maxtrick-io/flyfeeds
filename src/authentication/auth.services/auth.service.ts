@@ -4,9 +4,11 @@ import { OAuthSettings} from '../auth.common/oauth';
 
 import { MsalService } from '@azure/msal-angular';
 import { Client } from '@microsoft/microsoft-graph-client';
+import {User as BetaUser} from '@microsoft/microsoft-graph-types';
 
 import { AlertService } from './alert.service';
 import {Router} from '@angular/router';
+import { FramePrefix } from 'msal/lib-commonjs/utils/Constants';
 
 @Injectable({
   providedIn: 'root'
@@ -52,7 +54,7 @@ export class AuthService {
       }
       return null;
     }
-
+    pImg : any;
     private async getUser(): Promise<User> {
       if (!this.authenticated) { return null; }
 
@@ -75,11 +77,20 @@ export class AuthService {
         }
       });
 
-      const graphUser = await graphClient.api('/me').get();
+      // const graphUser = await graphClient.api('/me').get();
+
+      let graphUser = await graphClient.api('/me').get();
+
       const user = new User();
       user.displayName = graphUser.displayName;
       user.email = graphUser.mail || graphUser.userPrincipalName;
-      console.log(user);
+      user.avatar = graphUser.avatar;
+      console.log(graphUser);
+
+      let gross: BetaUser = await graphClient
+      .api('/me/photo/$value').get();
+
+      this.pImg = gross;
       return user;
     }
 }

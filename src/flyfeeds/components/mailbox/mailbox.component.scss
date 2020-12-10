@@ -1,4 +1,4 @@
-@import "../../assets/customCss/mod.palate.scss";
+@import "../../../assets/customCss/mod.palate";
 .nav{
     position: relative;width: 100%;  height:100vh;  padding-left: 15px;padding-right: 15px;
     &__sidenav{
@@ -16,24 +16,24 @@
         border:0;
         background-size: 1.2rem;
         border-left: 3px solid transparent;
-    } 
+    }
     &__s1 > button:not(.nav__s1-logo):hover, &__s2 > button:hover {
         filter: invert(35%) sepia(18%) saturate(3413%) hue-rotate(207deg) brightness(93%) contrast(87%);
         border-left: 3px solid rgb(65, 60, 60);
       }
     &__s1 > button:last-child{ height: 1.6em!important;}
 
-    &__s1-logo{background-image: url("../../assets/icons/clones/mailbox.png");background-size: 2rem}
-    &__s1-explore{background-image: url("../../assets/icons/artifacts/columns-gap.svg")}
-    &__s1-transit{background-image: url("../../assets/icons/artifacts/location-pin.svg")}
-    &__s1-mail{background-image: url("../../assets/icons/artifacts/inbox-fill.svg")}
-    &__s1-collection{background-image: url("../../assets/icons/artifacts/collection-fill.svg")}
-    &__s1-chat-box{background-image: url("../../assets/icons/artifacts/chat-square-dots-fill.svg")}
-    &__s1-bookmark{background-image: url("../../assets/icons/artifacts/bookmark-fill.svg")}
-    &__s1-m-opt{background-image: url("../../assets/icons/artifacts/dash.svg")}
+    &__s1-logo{background-image: url("../../../assets/icons/clones/mailbox.png");background-size: 2rem}
+    &__s1-explore{background-image: url("../../../assets/icons/artifacts/columns-gap.svg")}
+    &__s1-transit{background-image: url("../../../assets/icons/artifacts/location-pin.svg")}
+    &__s1-mail{background-image: url("../../../assets/icons/artifacts/inbox-fill.svg")}
+    &__s1-collection{background-image: url("../../../assets/icons/artifacts/collection-fill.svg")}
+    &__s1-chat-box{background-image: url("../../../assets/icons/artifacts/chat-square-dots-fill.svg")}
+    &__s1-bookmark{background-image: url("../../../assets/icons/artifacts/bookmark-fill.svg")}
+    &__s1-m-opt{background-image: url("../../../assets/icons/artifacts/dash.svg")}
 
-    &__s2-gear{background-image: url("../../assets/icons/artifacts/gear-fill.svg")}
-    &__s2-person-circle{background-image: url("../../assets/icons/artifacts/person-circle.svg");}
+    &__s2-gear{background-image: url("../../../assets/icons/artifacts/gear-fill.svg")}
+    &__s2-person-circle{background-image: url("../../../assets/icons/artifacts/person-circle.svg");}
 }
 
 .pin{
@@ -42,7 +42,7 @@
   }
   &__container{
     height: 100%;
-   
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -62,7 +62,7 @@
     font-weight: 500;
   }
   &__filter{
-    background-image: url("../../assets/icons/artifacts/plus.svg");
+    background-image: url("../../../assets/icons/artifacts/plus.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #9898981f!important;
@@ -72,7 +72,7 @@
   }
 }
 
-/*--------cpmponent specific modifier---------*/ 
+/*--------cpmponent specific modifier---------*/
 p{margin: 0;}
 button{background-color: transparent!important;}
 // .assigns{ overflow-y: auto;}
