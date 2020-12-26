@@ -51,8 +51,7 @@
 
 /*----mat-drawer------*/
 .mat-list-base .mat-list-item .mat-list-text>*,
-.mat-list-base .mat-list-option .mat-list-text>* {
-  font-weight: 500!important;}
+.mat-list-base .mat-list-option .mat-list-text>* {font-weight: 500!important; padding-top: 0!important;}
 
 /*.mat-tab-label {min-width: 0!important;padding: 0 14px!important;}*/
 .mat-tab-labels{justify-content: space-between;}

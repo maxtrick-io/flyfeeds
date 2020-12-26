@@ -1,0 +1,62 @@
+<div class="nav d-flex flex-row h-100">
+  <div class="nav__conf">
+    <mat-nav-list class="nav__list">
+      <mat-list-item class="nav__item" *ngFor="let card of confList">
+          <p matLine class="text-muted nav__section" (click)='setSelect(card)'> {{card}} </p>
+      </mat-list-item>
+    </mat-nav-list>
+  </div>
+  <mat-drawer-container class="item" autosize class="h-100">
+    <mat-drawer #drawer opened class="pin__inbox" position="start" mode="side">
+        <div class="item__container">
+            <div class="item__title">
+                <span class="item__head title d-flex text-capitalize">{{header}}</span>
+            </div>
+            <div class="item__sorted d-flex justify-content-start mb-3 w-100 pt-3">
+                <mat-tab-group class="w-100">
+                    <mat-tab class="tabs tabs__all" label="all">
+                        <mat-nav-list class="tabs__list">
+                            <mat-list-item class="tabs__item" *ngFor="let card of posts">
+                                <h6 matLine class="text-capitalize"> {{card.name}} </h6>
+                                <p matLine class="text-muted"> {{card.body}} </p>
+                                <p matLine class="text-muted"> {{card.email}} </p>
+                            </mat-list-item>
+                        </mat-nav-list>
+                    </mat-tab>
+                    <mat-tab label="focused"></mat-tab>
+                    <mat-tab label="others"> </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </mat-drawer>
+    <div class="item__content d-flex align-content-center w-100 canvas-activity">
+        <div class="overflow-auto h-100 w-100"></div>
+    </div>
+  </mat-drawer-container>
+</div>
+    <!-- <div class="col-md-12 px-0 h-100 d-flex justify-content-between"> -->
+      <!-- <div class="content h-100 w-100 d-flex flex-column justify-content-between">
+        <div class="content__account border-bottom"></div>
+        <div class="content__app border-bottom">
+          
+        </div> -->
+        <!-- <div class="avatar">
+          <img mat-card-avatar src="{{_imgUrl}}">
+        </div>
+        <span class="t-size mx-2 pb-2 pt-2 text-center justify-content-around">mailbox</span>
+        <div class="d-flex justify-content-center">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button mat-flat-button type="button" class="btn btn-secondary">GitHub</button>
+            <button mat-flat-button type="button" class="btn btn-secondary">Outlook</button>
+            <button mat-flat-button type="button" class="btn btn-secondary">Gmail</button>
+          </div>
+        </div>
+        <div class="btn-grp h-auto d-flex flex-column justify-content-between">
+          <div class="-li m-2 text-center">you're about to {{option}} <span class="">{{access}}</span> with GitHub</div> 
+          <mat-slide-toggle (change)="onChange($event)" class="align-self-center mb-2" ></mat-slide-toggle>
+         <div class="d-flex justify-content-center">
+           
+         </div>
+        </div> -->
+      <!-- </div> -->
+    <!-- </div> -->

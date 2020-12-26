@@ -4,15 +4,16 @@ import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 import { AuthService } from 'src/authentication/auth.services/auth.service';
 
 @Component({
-  selector: 'app-quick-profile',
-  templateUrl: './quick-profile.component.html',
-  styleUrls: ['./quick-profile.component.scss']
+  selector: 'config',
+  templateUrl: './config.component.html',
+  styleUrls: ['./config.component.scss']
 })
-export class QuickProfileComponent implements OnInit {
+export class ConfigComponent implements OnInit {
   isDisabled = true;
   option = 'sign-in';
   access = 'publicly';
   _imgUrl: string;
+  confList: Array<string> = ['Personalization','Logistics', 'Community & Communication','Microsoft Subscription', 'Payments'];
   constructor(private auth: AuthService) {
     // this._imgUrl = 'data:image/bmp;base64,'+Base64.encode(auth.pImg);
    }
@@ -46,4 +47,8 @@ export class QuickProfileComponent implements OnInit {
   //     Reader.readAsDataURL(image);
   //   }
   // }
+  header: string;
+  setSelect(value: any){
+    this.header = value;
+  }
 }

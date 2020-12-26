@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
-
+@import '../../../assets/colorpallate.scss';
+@import "../../../assets/customCss/mod.palate";
 /* span{padding-left: 10px;font-size: 15px;margin-top:-2px;text-transform: uppercase;} */
 h5,h6,p,span{text-align: center;color:#23272A;}
 span{margin:0px 10px;color: #23272A;}
@@ -58,3 +59,86 @@ min-height: 50px;
 border-bottom: 1px solid #F1F1F1;
 }
 
+// scss usage new addition in respect to current features
+
+.content{
+  &__account{
+    height: 40%;
+    background-color: #5F79EC;
+  }
+  &__app{
+    height: 60%;
+  }
+}
+
+
+
+.nav{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+  &__conf{
+    width: 250px;
+    height: 100%;
+    border-right: 1px solid $border_gry;
+  }
+
+  &__list{
+    min-width: 100px;
+    list-style: none;
+  }
+
+  &__item {
+    border-left: 3px solid transparent;
+    height: 3rem;
+  }
+
+  &__item:hover {
+    border-left: 3px solid;
+  }
+
+  &__section{
+    font-size: small!important;
+    text-align: left!important;
+  }
+}
+
+.item{
+  &__inbox{
+    min-width: 260px;max-width: 22vw; width: 100%;
+  }
+  &__container{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding:0 $p2;
+    margin: .75rem 0;
+  }
+  &__head{
+    font-size: x-large;
+    font-weight: 500;
+  }
+  &__filter{
+    background-image: url("../../../assets/icons/artifacts/plus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #9898981f!important;
+    background-size: 1.36rem;
+    height: 1.5rem;
+    min-width: 1.5rem!important;
+  }
+}

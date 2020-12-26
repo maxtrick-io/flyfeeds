@@ -12,7 +12,7 @@ import { MatListModule } from '@angular/material/list'
 import { HttpClientModule } from '@angular/common/http';
 import { MAT_RIPPLE_GLOBAL_OPTIONS, RippleGlobalOptions, MatRippleModule } from '@angular/material/core';
 import { PostboxComponent } from './components/postbox/postbox.component';
-import { QuickProfileComponent } from './components/quick-profile/quick-profile.component';
+import { ConfigComponent } from './components/settings/config.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 const globalRippleConfig: RippleGlobalOptions = {
@@ -25,7 +25,7 @@ const globalRippleConfig: RippleGlobalOptions = {
 };
 
 @NgModule({
-  declarations:[MailboxComponent, ControlPanelComponent, PostboxComponent, QuickProfileComponent],
+  declarations:[MailboxComponent, ControlPanelComponent, PostboxComponent, ConfigComponent],
   imports: [
     CommonModule,
     FlyfeedsRoutingModule,

@@ -3,7 +3,7 @@
     <div class="auth__card card w-auto p-2 h-75">
       <div class="auth__formContainer">
         <div *ngIf="!username.touched || !username.invalid"></div>
-          <div *ngIf="username.touched && username.invalid" class="alert alert-danger m-1">this field is required.</div>
+          <div *ngIf="username.touched && username.invalid" class="alert alert-danger m-1">This field is required.</div>
           <form [formGroup]="form" class="auth__form form-group mx-5 W-100">
             <input formControlName="username" class="auth__email form-control" placeholder="e mail">
             <input formControlName="password" class="auth__password form-control" type="password" placeholder="password">

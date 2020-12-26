@@ -2,7 +2,7 @@ import { PostmanService } from '../../services/postman/postman.service';
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../../../authentication/auth.services/auth.service';
 import { MatDialog } from '@angular/material/dialog';
-import { QuickProfileComponent } from '../quick-profile/quick-profile.component';
+import { ConfigComponent } from '../settings/config.component';
 
 @Component({
   selector: 'app-mailbox',
@@ -26,9 +26,9 @@ export class MailboxComponent implements OnInit {
     });
   }
   openDialog(e: Event): void {
-    const dialogRef = this.dialog.open(QuickProfileComponent, {
-      width: '350px',
-      height: '525px'
+    const dialogRef = this.dialog.open(ConfigComponent, {
+      width: '80vw',
+      height: '90vh'
     });
   }
 }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QuickProfileComponent } from './quick-profile.component';
+import { ConfigComponent } from './config.component';
 
 describe('QuickProfileComponent', () => {
-  let component: QuickProfileComponent;
-  let fixture: ComponentFixture<QuickProfileComponent>;
+  let component: ConfigComponent;
+  let fixture: ComponentFixture<ConfigComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuickProfileComponent ]
+      declarations: [ ConfigComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QuickProfileComponent);
+    fixture = TestBed.createComponent(ConfigComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

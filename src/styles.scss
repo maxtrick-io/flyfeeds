@@ -2,6 +2,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
+// @import'../src/assets/customCss/modifier.master.css';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -59,5 +60,12 @@ body{
   .mat-dialog-container{
     padding: 0!important;
   }
+
+  .cdk-overlay-dark-backdrop {
+    background: transparent;
+  }
+  .mat-list-base {
+    padding-top: 0;
+}
 }
 
